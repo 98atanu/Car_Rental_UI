@@ -34,12 +34,22 @@ const Testimonial = () => {
                 data-aos= "fade-up"
                 className='text-center sm:px-44'>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
             </div>
-            <div className='grid grid-cols-1 sm:grid-cols-2 gap-8 text-black dark:text-white'>
+            <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 text-black dark:text-white'>
                 {testimonialData.map((data,index)=> (
-                    <div key={index}>
-                        <div>
-                            <img src="" alt="" />
+                    <div 
+                    data-aos="fade-up"
+                    data-aos-delay = {data.aosDelay}
+                    key={index} 
+                    className='card text-center group space-y-3 sm:space-y-6 p-4 bg-gray-100 dark:bg-white/20 sm:py-12 duration-300 rounded-lg'>
+                        <div className='grid place-items-center'>
+                            <img src="https://picsum.photos/200" 
+                            alt="" 
+                            className='h-20 w-20 rounded-full'
+                            />
                         </div>
+                        <div className='text-2xl'>⭐⭐⭐⭐⭐</div>
+                        <p>{data.description}</p>
+                        <p className='font-semibold text-center'>{data.name}</p>
 
                     </div>
 
