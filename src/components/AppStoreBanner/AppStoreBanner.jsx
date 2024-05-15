@@ -19,7 +19,7 @@ const AppStoreBanner = () => {
         <div className='text-black py-10 sm:min-h-[400px] sm:grid sm:place-items-center rounded-xl'
         style={bannerImg}>
           <div>
-            <div>
+            <div className='space-y-4'>
               <h1 className='text-2xl text-center sm:text-4xl font-semibold font-serif'>Get Started with our app</h1>
               <p 
               data-aos = "fade-up"
