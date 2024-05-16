@@ -1,5 +1,26 @@
 import React from 'react'
-import { FaInstagram, FaLocationArrow, FaMobileAlt } from 'react-icons/fa'
+import { FaFacebook, FaInstagram, FaLinkedin, FaLocationArrow, FaMobileAlt } from 'react-icons/fa'
+
+
+const FooterLinks = [
+    {
+        title : "Home",
+        link : "/#"
+    },
+    {
+        title : "About",
+        link : "/#about"
+    },
+    {
+        title : "Contact",
+        link : "/#contact"
+    },
+    {
+        title : "Blog",
+        link : "/#blog"
+    },
+
+]
 
 const Footer = () => {
   return (
@@ -18,11 +39,34 @@ const Footer = () => {
                         <FaMobileAlt/>
                         <p>+91 123456789</p>
                     </div>
-                    <div>
+                    <div className='flex items-center gap-3 mt-6'>
                         <a href='#'>
-                            <FaInstagram className='text-3xl '/>
+                            <FaInstagram className='text-3xl hover:text-primary duration-300 '/>
+                        </a>
+                        <a href='#'>
+                            <FaFacebook className='text-3xl hover:text-primary duration-300 '/>
+                        </a>
+                        <a href='#'>
+                            <FaLinkedin className='text-3xl hover:text-primary duration-300 '/>
                         </a>
                     </div>
+                </div>
+                <div className='grid grid-cols-2 sm:grid-cols-3 col-span-2 md:pl-10'>
+                    <div>
+                        <div>
+                            <h1 className=''>Important Links</h1>
+                            <ul>
+                                {FooterLinks.map((data)=> (
+                                    <li>
+                                        <a href={data.link}></a>
+
+                                    </li>
+                                )
+                                )}
+                            </ul>
+                        </div>
+                    </div>
+
                 </div>
             </div>
         </div>
